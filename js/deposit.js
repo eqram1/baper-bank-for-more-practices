@@ -32,6 +32,22 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
 
     depositTotalElement.innerText = newDepositTotal;
 
+    // step-9.get current balance total from span tag by set id
+
+    const balanceTotalElement = document.getElementById('balance-total');
+    const prevBalanceTotalString = balanceTotalElement.innerText;
+
+    // step-10.  value transfer from string to number 
+
+    const prevBalanceTotal = parseFloat(prevBalanceTotalString);
+
+    // step-11.Calculate new balance total  
+
+    const newBalanceTotal = prevBalanceTotal + newDepositAmount;
+
+    // step-12.set the value to the balance total by inner text in a span tag
+
+    balanceTotalElement.innerText = newBalanceTotal;
 
 
 })
